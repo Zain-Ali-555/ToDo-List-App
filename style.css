@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, royalblue, crimson);
+}
+
+.App-todoList {
+  width: 50vw;
+  max-width: 30rem;
+  /* max-height: 50vh; */
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+
+.App-title {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  font-size: 20px;
+}
+
+.App-title img {
+  height: 30px;
+}
+
+/* App Input Section */
+
+.App-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.App-input input {
+  width: 100%;
+  background-color: rgb(247, 231, 231);
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 15px 95px 15px 15px;
+  outline: none;
+}
+.App-input input:focus {
+  border: 1px solid #ff4500;
+}
+
+.App-input button {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  background-color: orangered;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+/* App Task Section */
+
+.App-tasks {
+  padding: 0 1rem;
+}
+
+ul {
+  display: flex;
+  max-height: 30vh;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: auto;
+  scrollbar-color: orangered white;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  padding: 12px 8px 12px 30px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  background-image: url(/Img/images/unchecked.png);
+  background-position: center;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+}
+
+/* Checked Task Css */
+
+.task-checked {
+  color: rgb(67, 66, 66);
+  text-decoration: line-through;
+}
+
+.task-checked::before {
+  background-image: url(/Img/images/checked.png);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Unchecked Task Css */
+
+.task-unchecked {
+  color: black;
+}
+
+.task-unchecked::before {
+  background-image: url(/Img/images/unchecked.png);
+  background-position: center;
+  background-size: cover;
+  border: none;
+}
+
+span {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  color: #ff4500;
+  border: none;
+  font-size: larger;
+  border-radius: 50%;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+span:hover {
+  background-color: #ff4500;
+  color: white;
+}
