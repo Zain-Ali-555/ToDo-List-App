@@ -1,0 +1,22 @@
+{
+    "name": "ToDo List App",
+    "short_name": "ToDoApp",
+    "description": "A simple and efficient To-Do List application to manage your daily tasks.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+      {
+        "src": "./Img/images/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "./Img/images/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
