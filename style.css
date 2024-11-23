@@ -7,24 +7,24 @@
 html,
 body {
   height: 100%;
-  width: 100%;
+  width:  100%;
 }
 
 .container {
   display: grid;
   place-content: center;
-  width: 100vw;
+  width:  100vw;
   height: 100vh;
   background: linear-gradient(135deg, royalblue, crimson);
 }
 
 .App-todoList {
-  width: 50vw;
+  width: 90vw; /* Default to 90% for smaller screens */
   max-width: 30rem;
-  /* max-height: 50vh; */
   background-color: #fff;
   padding: 2rem 1rem;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .App-title {
@@ -156,4 +156,52 @@ span {
 span:hover {
   background-color: #ff4500;
   color: white;
+}
+
+/* Responsive Design for All Devices */
+@media (max-width: 768px) {
+  .App-todoList {
+    width: 80vw; /* Reduce width for tablets */
+  }
+
+  .App-title {
+    font-size: 18px;
+  }
+
+  .App-input button {
+    padding: 10px 20px;
+  }
+
+  ul {
+    max-height: 40vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-todoList {
+    width: 95vw; /* Full width for mobile devices */
+    padding: 1.5rem 1rem;
+  }
+
+  .App-title {
+    font-size: 16px;
+  }
+
+  .App-input input {
+    padding: 10px 70px 10px 10px; /* Adjust padding */
+  }
+
+  .App-input button {
+    padding: 10px 15px;
+  }
+
+  ul {
+    gap: 0.5rem;
+  }
+
+  span {
+    height: 25px;
+    width: 25px;
+    font-size: medium;
+  }
 }

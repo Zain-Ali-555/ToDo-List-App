@@ -1,22 +1,14 @@
 {
-    "name": "ToDo List App",
-    "short_name": "ToDoApp",
-    "description": "A simple and efficient To-Do List application to manage your daily tasks.",
-    "start_url": "./index.html",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#4CAF50",
-    "icons": [
-      {
-        "src": "./Img/images/icon.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "./Img/images/icon.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ]
+  "manifest_version": 3,
+  "name": "ToDo List App",
+  "version": "1.0.0",
+  "description": "A simple and efficient To-Do List application to manage your tasks.",
+  "icons": {
+    "48": "./Img/images/icon.png",
+    "128": "./Img/images/icon.png"
+  },
+  "action": {
+    "default_popup": "./index.html",
+    "default_icon": "./Img/images/icon.png"
   }
-  
+}
